@@ -27,21 +27,21 @@ public class BankAccountAPP {
             String sSN = accountHolder[1];
             String accountType = accountHolder[2];
             double initDeposit = Double.parseDouble(accountHolder[3]);
-         //  System.out.println(name + " " + sSN + " " + accountType + " $ " + initDeposit);
+            //  System.out.println(name + " " + sSN + " " + accountType + " $ " + initDeposit);
             if (accountType.equals("Savings")) {
                 System.out.println("OPEN A SAVINGS ACCOUNT");
-                accounts.add(new Savings(name,sSN,initDeposit));
-            }
-            else if (accountType.equals("Checking")) {
+                accounts.add(new Savings(name, sSN, initDeposit));
+            } else if (accountType.equals("Checking")) {
                 System.out.println("OPEN A Checking ACCOUNT");
-                accounts.add(new Checking(name,sSN,initDeposit));
-            }
-            else {
+                accounts.add(new Checking(name, sSN, initDeposit));
+            } else {
                 System.out.println("ERROR READ ACCOUNT TYPE");
             }
-            for (Account acc: accounts
-                 ) {
 
+
+            for (Account acc : accounts) {
+                System.out.println("*****************");
+               acc.showInfo();
             }
         }
     }
